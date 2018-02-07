@@ -1,5 +1,6 @@
 package org.bubulescu.receivers;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
         btnSendBcast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                Intent bcast = new Intent("org.bubulescu.broadcast.BUTTON_PRESSED");
+                // bcast.setAction("org.bubulescu.broadcast.BUTTON_PRESSED");
+                sendBroadcast(bcast);
             }
         });
     }
