@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent bcast = new Intent("org.bubulescu.broadcast.BUTTON_PRESSED");
                 // bcast.setAction("org.bubulescu.broadcast.BUTTON_PRESSED");
+                bcast.putExtra("key", "Sample extra message...");
                 sendBroadcast(bcast);
             }
         });
